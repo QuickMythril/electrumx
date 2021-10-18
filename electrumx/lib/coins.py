@@ -4007,7 +4007,7 @@ class Circcash(Coin):
     # https://github.com/kyuupichan/electrumx/issues/363
     
     P2PKH_VERBYTE = bytes.fromhex("1c")
-    P2SH_VERBYTES = bytes.fromhex("05")
+    P2SH_VERBYTES = (bytes.fromhex("05"),)
     #https://github.com/jvanname/circcash/blob/master/src/base58.h#L270
     
     ##--WIF_BYTE = bytes.fromhex("b0")
@@ -4041,7 +4041,7 @@ class CirccashTestnet(Circcash):
     # https://github.com/kyuupichan/electrumx/issues/363
     
     P2PKH_VERBYTE = bytes.fromhex("58")
-    P2SH_VERBYTES = bytes.fromhex("c4")
+    P2SH_VERBYTES = (bytes.fromhex("c4"),)
     #https://github.com/jvanname/circcash/blob/master/src/base58.h#L270
     
     ##--WIF_BYTE = bytes.fromhex("ef")
