@@ -3994,3 +3994,72 @@ class Syscoin(AuxPowMixin, Coin):
     RPC_PORT = 8370
     REORG_LIMIT = 2000
     CHUNK_SIZE = 360
+
+
+class Devcoin:
+    NAME = "Devcoin"
+    SHORTNAME = "DVC"
+    NET = "mainnet"
+    
+    ##--XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    ##--XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    # Need base58 prefixes: EXT_PUBLIC_KEY / EXT_SECRET_KEY
+    # https://github.com/kyuupichan/electrumx/issues/363
+
+    P2PKH_VERBYTE = bytes.fromhex("00")
+    P2SH_VERBYTES = (bytes.fromhex("05"),)
+    #https://github.com/devcoin/core/blob/master/src/base58.h#L271
+
+    ##--WIF_BYTE = bytes.fromhex("80")
+    # Need "version byte" - https://learnmeabitcoin.com/technical/wif
+
+    GENESIS_HASH = ('0000000062558fec003bcbf29e915cdd'
+                     'fc34fa257dc87573f28e4520d1c7c11e')
+    #https://github.com/devcoin/core/blob/master/src/main.cpp#L36
+
+    ##--TX_COUNT = 565436782
+    ##--TX_COUNT_HEIGHT = 646855
+    ##--TX_PER_BLOCK = 2200
+    # Need to check explorer or local node
+
+    RPC_PORT = 52332
+    #https://github.com/devcoin/core/blob/master/src/bitcoinrpc.cpp#L47
+
+    ##--REORG_LIMIT = 200
+    # The maximum number of blocks to be able to handle in a chain reorganisation. ElectrumX retains some fairly compact undo information for this many blocks in levelDB. The default is a function of COIN and NET; for Bitcoin mainnet it is 200.
+
+
+class DevcoinTestnet(Devcoin):
+    ##--SHORTNAME = "XDV"
+    # Does TESTDVC have a short name?
+
+    NET = "testnet"
+
+    ##--XPUB_VERBYTES = bytes.fromhex("043587cf")
+    ##--XPRV_VERBYTES = bytes.fromhex("04358394")
+    # Need base58 prefixes: EXT_PUBLIC_KEY / EXT_SECRET_KEY
+    # https://github.com/kyuupichan/electrumx/issues/363
+
+    P2PKH_VERBYTE = bytes.fromhex("6f")
+    P2SH_VERBYTES = (bytes.fromhex("c4"),)
+    #https://github.com/devcoin/core/blob/master/src/base58.h#L271
+
+    ##--WIF_BYTE = bytes.fromhex("ef")
+    # Need "version byte" - https://learnmeabitcoin.com/technical/wif
+
+    GENESIS_HASH = ('0000000062558fec003bcbf29e915cdd'
+                    'fc34fa257dc87573f28e4520d1c7c11e')
+    #https://github.com/devcoin/core/blob/master/src/main.cpp#L2878
+
+    ##--TX_COUNT = 12242438
+    ##--TX_COUNT_HEIGHT = 1035428
+    ##--TX_PER_BLOCK = 21
+    # Need to check explorer or local node
+
+    RPC_PORT = 62332
+    #https://github.com/devcoin/core/blob/master/src/bitcoinrpc.cpp#L47
+
+    ##--REORG_LIMIT = 8000
+    # The maximum number of blocks to be able to handle in a chain reorganisation. ElectrumX retains some fairly compact undo information for this many blocks in levelDB. The default is a function of COIN and NET; for Bitcoin mainnet it is 200.
+
+    PEER_DEFAULT_PORTS = {'t': '51001', 's': '51002'}
