@@ -4025,14 +4025,11 @@ class Circcash(Coin):
     RPC_PORT = 11632
     #https://github.com/jvanname/circcash/blob/master/src/bitcoinrpc.cpp#L42
     
-    ##--REORG_LIMIT = 800
-    # The maximum number of blocks to be able to handle in a chain reorganisation. ElectrumX retains some fairly compact undo information for this many blocks in levelDB. The default is a function of COIN and NET; for Bitcoin mainnet it is 200.
+    REORG_LIMIT = 800
+    #Using defaults for Litecoin and other chains
 
 
 class CirccashTestnet(Circcash):
-    ##--SHORTNAME = "XLT"
-    # Does TESTCIRC have a short name?
-    
     NET = "testnet"
     
     ##--XPUB_VERBYTES = bytes.fromhex("043587cf")
@@ -4059,7 +4056,7 @@ class CirccashTestnet(Circcash):
     RPC_PORT = 111632
     #https://github.com/jvanname/circcash/blob/master/src/bitcoinrpc.cpp#L42
     
-    ##--REORG_LIMIT = 4000
-    # The maximum number of blocks to be able to handle in a chain reorganisation. ElectrumX retains some fairly compact undo information for this many blocks in levelDB. The default is a function of COIN and NET; for Bitcoin mainnet it is 200.
+    REORG_LIMIT = 4000
+    #Using defaults for Litecoin and other chains
     
     PEER_DEFAULT_PORTS = {'t': '51001', 's': '51002'}
