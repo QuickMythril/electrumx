@@ -4010,8 +4010,8 @@ class Devcoin:
     P2SH_VERBYTES = (bytes.fromhex("05"),)
     #https://github.com/devcoin/core/blob/master/src/base58.h#L271
 
-    ##--WIF_BYTE = bytes.fromhex("80")
-    # Need "version byte" - https://learnmeabitcoin.com/technical/wif
+    WIF_BYTE = bytes.fromhex("80")
+    #https://github.com/devcoin/core/blob/master/contrib/testgen/gen_base58_test_vectors.py#L22
 
     GENESIS_HASH = ('0000000062558fec003bcbf29e915cdd'
                      'fc34fa257dc87573f28e4520d1c7c11e')
@@ -4044,8 +4044,8 @@ class DevcoinTestnet(Devcoin):
     P2SH_VERBYTES = (bytes.fromhex("c4"),)
     #https://github.com/devcoin/core/blob/master/src/base58.h#L271
 
-    ##--WIF_BYTE = bytes.fromhex("ef")
-    # Need "version byte" - https://learnmeabitcoin.com/technical/wif
+    WIF_BYTE = bytes.fromhex("ef")
+    #https://github.com/devcoin/core/blob/master/contrib/testgen/gen_base58_test_vectors.py#L23
 
     GENESIS_HASH = ('0000000062558fec003bcbf29e915cdd'
                     'fc34fa257dc87573f28e4520d1c7c11e')
