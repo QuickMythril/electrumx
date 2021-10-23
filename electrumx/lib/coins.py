@@ -4010,8 +4010,8 @@ class Circcash(Coin):
     P2SH_VERBYTES = (bytes.fromhex("05"),)
     #https://github.com/jvanname/circcash/blob/master/src/base58.h#L270
     
-    ##--WIF_BYTE = bytes.fromhex("b0")
-    # Need "version byte" - https://learnmeabitcoin.com/technical/wif
+    WIF_BYTE = bytes.fromhex("b0")
+    #https://github.com/jvanname/circcash/blob/master/contrib/testgen/gen_base58_test_vectors.py#L22
     
     GENESIS_HASH = ('7c9f9446c1cae87d7bf57755e01b2684'
                     'ad06828d22069464829a97c58982aedc')
@@ -4044,8 +4044,8 @@ class CirccashTestnet(Circcash):
     P2SH_VERBYTES = (bytes.fromhex("c4"),)
     #https://github.com/jvanname/circcash/blob/master/src/base58.h#L270
     
-    ##--WIF_BYTE = bytes.fromhex("ef")
-    # Need "version byte" - https://learnmeabitcoin.com/technical/wif
+    WIF_BYTE = bytes.fromhex("ef")
+    #https://github.com/jvanname/circcash/blob/master/contrib/testgen/gen_base58_test_vectors.py#L23
     
     GENESIS_HASH = ('708bb3990020c7d6862ad7f7d302fa2d'
                     'ed9d98dbe64629965402449583acc2df')
