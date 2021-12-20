@@ -4001,8 +4001,9 @@ class Circcash(Coin):
     SHORTNAME = "CIRC"
     NET = "mainnet"
     
-    ##--XPUB_VERBYTES = bytes.fromhex("0488b21e")
-    ##--XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    # Temporary test values
     # Need base58 prefixes: EXT_PUBLIC_KEY / EXT_SECRET_KEY
     # https://github.com/kyuupichan/electrumx/issues/363
     
@@ -4017,10 +4018,11 @@ class Circcash(Coin):
                     'ad06828d22069464829a97c58982aedc')
     #https://github.com/jvanname/circcash/blob/master/src/main.cpp#L38
     
-    ##--TX_COUNT = 8908766
-    ##--TX_COUNT_HEIGHT = 1105256
-    ##--TX_PER_BLOCK = 10
-    # Need to check explorer or local node
+    TX_COUNT = 364000
+    TX_COUNT_HEIGHT = 350000
+    TX_PER_BLOCK = 1.04
+    # Temporary test values
+    # Estimated from previous 1000 blocks on https://chainz.cryptoid.info/circ/
     
     RPC_PORT = 11632
     #https://github.com/jvanname/circcash/blob/master/src/bitcoinrpc.cpp#L42
