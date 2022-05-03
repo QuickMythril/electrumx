@@ -4015,3 +4015,21 @@ class Syscoin(AuxPowMixin, Coin):
     RPC_PORT = 8370
     REORG_LIMIT = 2000
     CHUNK_SIZE = 360
+
+
+class Circcash(Coin):
+    NAME = "Circcash"
+    SHORTNAME = "CIRC"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    P2PKH_VERBYTE = bytes.fromhex("1c")
+    P2SH_VERBYTES = (bytes.fromhex("05"),)
+    WIF_BYTE = bytes.fromhex("9c")
+    GENESIS_HASH = ('7c9f9446c1cae87d7bf57755e01b2684'
+                    'ad06828d22069464829a97c58982aedc')
+    TX_COUNT = 364000
+    TX_COUNT_HEIGHT = 350000
+    TX_PER_BLOCK = 1
+    RPC_PORT = 11632
+    REORG_LIMIT = 800
